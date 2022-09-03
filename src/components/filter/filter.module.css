@@ -1,0 +1,58 @@
+.filter {
+  display: flex;
+  height: 30px;
+
+  > button {
+    background-color: #ffffff;
+    border: 1px solid var(--input-border);
+    border-left: none;
+    color: var(--primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    padding: 0;
+    width: 30px;
+
+    > svg {
+      height: 18px;
+      width: 18px;
+    }
+
+    &:hover:not([disabled]) {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+}
+
+.input {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 3px 0 0 3px;
+  color: var(--secondary);
+  flex: 1;
+  font-family: inherit;
+  font-size: 13px;
+  margin: 0;
+  padding: 0 12px;
+  outline: none !important;
+
+  &:hover:not(:focus) {
+    border-color: var(--input-hover-border);
+  }
+
+  &:focus {
+    border-color: var(--primary);
+  }
+}
+
+.search {
+  border-radius: 0 3px 3px 0;
+}
